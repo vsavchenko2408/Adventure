@@ -1,40 +1,33 @@
 #include "Player.h"
 #include <iostream>
+
 Player::Player()
 {
-    x =10;
-    y =10;
+    x = 1;
+    y = 1;
 }
-void Player::move(char mv)
+void Player::move(int a, int b)
 {
-    switch(mv)
+
+    while (a != x && b != y)
     {
-    case 'w':
-        if(x>1)
+
+        if (a < x)
         {
-        --x;
+            --x;
         }
-        break;
-    case 's':
-        if(x<18)
+        if (a > x)
         {
-        ++x;
+            ++x;
         }
-        break;
-    case 'a':
-        if(y>1)
+        if (b < y)
         {
-        --y;
+            --y;
         }
-        break;
-    case 'd':
-        if(y<18)
+        if (b > y)
         {
-        ++y;
+            ++y;
         }
-        break;
-    default:
-        std::cerr << "Помилковий ввід!" << std::endl;
     }
 }
 

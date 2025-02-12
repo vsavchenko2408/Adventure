@@ -1,9 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-
-
-
 class Player
 {
     unsigned short x;
@@ -11,7 +8,7 @@ class Player
 
 public:
     Player();
-    void move(char mv);
+    void move(int a, int b);
     unsigned short get_x();
     unsigned short get_y();
 };
