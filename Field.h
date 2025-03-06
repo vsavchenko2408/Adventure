@@ -1,11 +1,13 @@
 #ifndef FIELD_H
 #define FIELD_H
-#include "Player.h"
-class Field // класс мапа
+#include <vector>
+class Field
 {
+    std::vector<std::vector<char>> field;
 
-
-    
+public:
+    Field();
+    void drawField();
 };
 
-#endif // FIELD_H
+#endif
