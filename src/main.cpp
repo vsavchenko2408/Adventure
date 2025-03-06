@@ -7,8 +7,10 @@ int main()
 {
     Field fl;
     fl.drawField();
-    std::cout << "Exit program!" << std::endl;
 
+#ifdef linux
+    std::cout << "\t\t\tExit program!" << std::endl;
+#endif
 #ifdef WIN32
     system("pause");
 #endif
