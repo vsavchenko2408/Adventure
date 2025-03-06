@@ -5,6 +5,7 @@
 
 int main()
 {
-
+    Field fl;
+    fl.drawField();
     return 0;
 }
