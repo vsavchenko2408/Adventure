@@ -8,8 +8,10 @@ class Player
     char symbol = 'P';
 
 public:
-Player();
-
+    Player();
+    int getX();
+    int getY();
+    void move(char mv);
 };
 
-#endif 
+#endif

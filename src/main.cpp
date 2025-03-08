@@ -1,33 +1,23 @@
 #include <iostream>
-//#include <cstdlib>
+// #include <cstdlib>
 #include "Player.h"
 #include "Field.h"
-
-
 
 int main()
 {
     Player p;
     Field fl;
-    fl.drawField();
+    fl.drawField(p);
+
     char move;
-    while(move != '0')
+    while (move != '0')
     {
+        std::cout << "Put the direction: " << std::endl;
         std::cin >> move;
-        switch(move)
-        {
-            case 'w':
-
-            case 's':
-
-            case 'a':
-
-            case 'd':
-
-            default:
-            std::cerr << "Wrong input!" << std::endl;
-        }
+        p.move(move);
+        fl.drawField(p);
     }
+
 #ifdef linux
     std::cout << "\t\t\tExit program!" << std::endl;
 #endif

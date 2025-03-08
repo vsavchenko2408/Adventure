@@ -17,13 +17,18 @@ Field::Field()
     }
 }
 
-void Field::drawField()
+void Field::drawField(Player &p)
 {
     for (size_t i = 0; i < 20; ++i)
     {
         for (size_t j = 0; j < 30; ++j)
         {
-            std::cout << field[i][j];
+            if (p.getX() == i && p.getY() == j)
+            {
+                std::cout << 'P';
+            }
+            else
+                std::cout << field[i][j];
         }
         std::cout << std::endl;
     }
