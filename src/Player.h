@@ -9,8 +9,8 @@ class Player
 public:
     int x, y;
     Player();
-
-
+    int get_health();
+    void damage();
 };
 
 #endif

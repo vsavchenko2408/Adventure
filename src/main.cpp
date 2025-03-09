@@ -2,20 +2,24 @@
 // #include <cstdlib>
 #include "Player.h"
 #include "Field.h"
-
+#include "Enemy.h"
 int main()
 {
     Player p;
+    Enemy e;
     Field fl;
-    fl.drawField(p);
+    // fl.drawField(p);
 
     char move;
     while (move != '0')
     {
+        system("clear");
+        fl.drawField(p, e);
+        std::cout << "Your health: " << p.get_health() << std::endl;
         std::cout << "Put the direction: " << std::endl;
         std::cin >> move;
         fl.move(move, p);
-        fl.drawField(p);
+        fl.drawField(p, e);
     }
 
 #ifdef linux

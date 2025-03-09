@@ -8,3 +8,12 @@ Player::Player()
     m_health = 100;
 }
 
+int Player::get_health()
+{
+    return m_health;
+}
+
+void Player::damage()
+{
+    m_health = m_health - 10;
+}

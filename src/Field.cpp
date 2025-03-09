@@ -1,5 +1,6 @@
 #include "Field.h"
 #include "Player.h"
+#include "Enemy.h"
 #include <iostream>
 
 Field::Field()
@@ -17,7 +18,7 @@ Field::Field()
     }
 }
 
-void Field::drawField(Player &p)
+void Field::drawField(Player &p, Enemy &e)
 {
     for (size_t i = 0; i < 20; ++i)
     {
@@ -27,8 +28,18 @@ void Field::drawField(Player &p)
             {
                 std::cout << 'P';
             }
+            else if (e.x == i && e.y == j)
+            {
+                std::cout << 'E';
+            }
+            else if (p.x == e.x && p.y == e.y)
+            {
+                p.damage();
+            }
             else
+            {
                 std::cout << field[i][j];
+            }
         }
         std::cout << std::endl;
     }

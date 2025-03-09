@@ -1,5 +1,5 @@
-#ifndef ENEMIES_H
-#define ENEMIES_H
+#ifndef ENEMY_H
+#define ENEMY_H
 
 class Enemy
 {
@@ -7,8 +7,8 @@ class Enemy
     int damage;
 
 public:
-int x;
-int y;
+    int x;
+    int y;
     Enemy();
 };
 
