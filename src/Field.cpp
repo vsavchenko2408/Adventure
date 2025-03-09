@@ -23,7 +23,7 @@ void Field::drawField(Player &p)
     {
         for (size_t j = 0; j < 30; ++j)
         {
-            if (p.getX() == i && p.getY() == j)
+            if (p.x == i && p.y == j)
             {
                 std::cout << 'P';
             }
@@ -33,4 +33,53 @@ void Field::drawField(Player &p)
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void Field::move(char mv, Player &p)
+{
+    switch (mv)
+    {
+    case 'w':
+        if (p.x > 1)
+        {
+            p.x--;
+            break;
+        }
+        else
+        {
+            break;
+        }
+    case 's':
+        if (p.x < 18)
+        {
+            p.x++;
+            break;
+        }
+        else
+        {
+            break;
+        }
+    case 'a':
+        if (p.y > 1)
+        {
+            p.y--;
+            break;
+        }
+        else
+        {
+            break;
+        }
+    case 'd':
+        if (p.y < 28)
+        {
+            p.y++;
+            break;
+        }
+        else
+        {
+            break;
+        }
+    default:
+        std::cerr << "Wrong input!" << std::endl;
+    }
 }

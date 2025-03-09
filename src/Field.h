@@ -9,6 +9,7 @@ class Field
 public:
     Field();
     void drawField(Player &p);
+    void move(char mv, Player &p);
 };
 
 #endif

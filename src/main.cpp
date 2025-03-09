@@ -14,7 +14,7 @@ int main()
     {
         std::cout << "Put the direction: " << std::endl;
         std::cin >> move;
-        p.move(move);
+        fl.move(move, p);
         fl.drawField(p);
     }
 

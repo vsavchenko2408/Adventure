@@ -3,15 +3,14 @@
 
 class Player
 {
-    int m_x, m_y;
+
     unsigned int m_health;
-    char symbol = 'P';
 
 public:
+    int x, y;
     Player();
-    int getX();
-    int getY();
-    void move(char mv);
+
+
 };
 
 #endif
