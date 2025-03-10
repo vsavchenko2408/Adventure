@@ -15,5 +15,5 @@ int Player::get_health()
 
 void Player::damage()
 {
-    m_health = m_health - 10;
+    m_health -= 10;
 }

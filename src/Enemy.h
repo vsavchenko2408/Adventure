@@ -10,6 +10,7 @@ public:
     int x;
     int y;
     Enemy();
+    void move();
 };
 
 #endif

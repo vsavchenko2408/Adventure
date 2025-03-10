@@ -5,7 +5,10 @@
 #include "Enemy.h"
 class Field
 {
+
     std::vector<std::vector<char>> field;
+    const int COL = 30;
+    const int ROW = 20;
 
 public:
     Field();

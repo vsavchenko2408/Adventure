@@ -5,12 +5,12 @@
 
 Field::Field()
 {
-    field.resize(20, std::vector<char>(30, ' '));
-    for (size_t i = 0; i < 20; ++i)
+    field.resize(ROW, std::vector<char>(COL, ' '));
+    for (size_t i = 0; i < ROW; ++i)
     {
-        for (size_t j = 0; j < 30; ++j)
+        for (size_t j = 0; j < COL; ++j)
         {
-            if (i == 0 || i == 19 || j == 0 || j == 29)
+            if (i == 0 || i == ROW - 1 || j == 0 || j == COL - 1)
             {
                 field[i][j] = '#';
             }
@@ -20,9 +20,13 @@ Field::Field()
 
 void Field::drawField(Player &p, Enemy &e)
 {
-    for (size_t i = 0; i < 20; ++i)
+    if (p.x == e.x && p.y == e.y)
     {
-        for (size_t j = 0; j < 30; ++j)
+        p.damage();
+    }
+    for (size_t i = 0; i < ROW; ++i)
+    {
+        for (size_t j = 0; j < COL; ++j)
         {
             if (p.x == i && p.y == j)
             {
@@ -31,10 +35,6 @@ void Field::drawField(Player &p, Enemy &e)
             else if (e.x == i && e.y == j)
             {
                 std::cout << 'E';
-            }
-            else if (p.x == e.x && p.y == e.y)
-            {
-                p.damage();
             }
             else
             {

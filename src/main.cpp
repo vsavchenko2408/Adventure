@@ -13,13 +13,19 @@ int main()
     char move;
     while (move != '0')
     {
+#ifdef WIN32
+        system("cls");
+#endif
+#ifdef linux
         system("clear");
+#endif
         fl.drawField(p, e);
         std::cout << "Your health: " << p.get_health() << std::endl;
         std::cout << "Put the direction: " << std::endl;
         std::cin >> move;
+        e.move();
         fl.move(move, p);
-        fl.drawField(p, e);
+        // fl.drawField(p, e);
     }
 
 #ifdef linux
