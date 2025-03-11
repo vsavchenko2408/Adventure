@@ -27,6 +27,7 @@ int main()
         std::cout << "Enemy 2 health: " << e2.get_health() << std::endl;
         std::cout << "Enemy 3 health: " << e3.get_health() << std::endl;
         std::cout << "Put the direction: " << std::endl;
+        std::cout << "For exit input 0!" << std::endl;
         std::cin >> move;
         e1.move();
         e2.move();
