@@ -4,6 +4,7 @@
 Enemy::Enemy()
 {
     srand(time(NULL));
+    health = 100;
     x = rand() % 18;
     y = rand() % 18;
 }
@@ -56,4 +57,9 @@ void Enemy::move()
     default:
         break;
     }
+}
+
+int Enemy::get_health()
+{
+    return health;
 }

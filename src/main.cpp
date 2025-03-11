@@ -23,6 +23,9 @@ int main()
 #endif
         fl.drawField(p, e1, e2, e3);
         std::cout << "Your health: " << p.get_health() << std::endl;
+        std::cout << "Enemy 1 health: " << e1.get_health() << std::endl;
+        std::cout << "Enemy 2 health: " << e2.get_health() << std::endl;
+        std::cout << "Enemy 3 health: " << e3.get_health() << std::endl;
         std::cout << "Put the direction: " << std::endl;
         std::cin >> move;
         e1.move();

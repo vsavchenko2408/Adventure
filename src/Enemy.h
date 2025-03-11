@@ -11,6 +11,7 @@ public:
     int y;
     Enemy();
     void move();
+    int get_health();
 };
 
 #endif
