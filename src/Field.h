@@ -12,7 +12,7 @@ class Field
 
 public:
     Field();
-    void drawField(Player &p, Enemy &e);
+    void drawField(Player &p, Enemy &e1, Enemy &e2, Enemy &e3);
     void move(char mv, Player &p);
 };
 

@@ -13,7 +13,7 @@ void Enemy::move()
     int move = rand() % 4;
     switch (move)
     {
-    case 1:
+    case 0:
         if (x < 18)
         {
             x++;
@@ -23,7 +23,7 @@ void Enemy::move()
         {
             break;
         }
-    case 2:
+    case 1:
         if (x > 1)
         {
             x--;
@@ -33,7 +33,7 @@ void Enemy::move()
         {
             break;
         }
-    case 3:
+    case 2:
         if (y < 28)
         {
             y++;
@@ -43,7 +43,7 @@ void Enemy::move()
         {
             break;
         }
-    case 4:
+    case 3:
         if (y > 1)
         {
             y--;

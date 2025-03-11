@@ -18,9 +18,9 @@ Field::Field()
     }
 }
 
-void Field::drawField(Player &p, Enemy &e)
+void Field::drawField(Player &p, Enemy &e1, Enemy &e2, Enemy &e3)
 {
-    if (p.x == e.x && p.y == e.y)
+    if ((p.x == e1.x && p.y == e1.y) || (p.x == e2.x && p.y == e2.y) || (p.x == e3.x && p.y == e3.y))
     {
         p.damage();
     }
@@ -32,7 +32,7 @@ void Field::drawField(Player &p, Enemy &e)
             {
                 std::cout << 'P';
             }
-            else if (e.x == i && e.y == j)
+            else if ((e1.x == i && e1.y == j) || (e2.x == i && e2.y == j) || (e3.x == i && e3.y == j))
             {
                 std::cout << 'E';
             }
