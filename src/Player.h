@@ -7,10 +7,12 @@ class Player
     unsigned int m_health;
 
 public:
-    int x, y;
+    int m_x, m_y;
+    int sh_x, sh_y;
     Player();
     int get_health();
     void damage();
+    char shoot();
 };
 
 #endif

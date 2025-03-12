@@ -90,6 +90,9 @@ void Field::move(char mv, Player &p)
         {
             break;
         }
+    case ' ':
+        p.shoot();
+        break;
     default:
         std::cerr << "Wrong input!" << std::endl;
     }
