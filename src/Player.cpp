@@ -19,7 +19,3 @@ void Player::damage()
 {
     m_health -= 10;
 }
-char shoot()
-{
-    
-}

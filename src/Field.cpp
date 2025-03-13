@@ -20,7 +20,7 @@ Field::Field()
 
 void Field::drawField(Player &p, Enemy &e1, Enemy &e2, Enemy &e3)
 {
-    if ((p.x == e1.x && p.y == e1.y) || (p.x == e2.x && p.y == e2.y) || (p.x == e3.x && p.y == e3.y))
+    if ((p.m_x == e1.x && p.m_y == e1.y) || (p.m_x == e2.x && p.m_y == e2.y) || (p.m_x == e3.x && p.m_y == e3.y))
     {
         p.damage();
     }
@@ -28,7 +28,7 @@ void Field::drawField(Player &p, Enemy &e1, Enemy &e2, Enemy &e3)
     {
         for (size_t j = 0; j < COL; ++j)
         {
-            if (p.x == i && p.y == j)
+            if (p.m_x == i && p.m_y == j)
             {
                 std::cout << 'P';
             }
@@ -51,9 +51,9 @@ void Field::move(char mv, Player &p)
     switch (mv)
     {
     case 'w':
-        if (p.x > 1)
+        if (p.m_x > 1)
         {
-            p.x--;
+            p.m_x--;
             break;
         }
         else
@@ -61,9 +61,9 @@ void Field::move(char mv, Player &p)
             break;
         }
     case 's':
-        if (p.x < 18)
+        if (p.m_x < 18)
         {
-            p.x++;
+            p.m_x++;
             break;
         }
         else
@@ -71,9 +71,9 @@ void Field::move(char mv, Player &p)
             break;
         }
     case 'a':
-        if (p.y > 1)
+        if (p.m_y > 1)
         {
-            p.y--;
+            p.m_y--;
             break;
         }
         else
@@ -81,18 +81,16 @@ void Field::move(char mv, Player &p)
             break;
         }
     case 'd':
-        if (p.y < 28)
+        if (p.m_y < 28)
         {
-            p.y++;
+            p.m_y++;
             break;
         }
         else
         {
             break;
         }
-    case ' ':
-        p.shoot();
-        break;
+
     default:
         std::cerr << "Wrong input!" << std::endl;
     }

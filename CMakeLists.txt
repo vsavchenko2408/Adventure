@@ -5,7 +5,7 @@ project(Adventure LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(Adventure src/main.cpp src/Player.h src/Player.cpp src/Field.h src/Field.cpp src/Enemy.h src/Enemy.cpp )
+add_executable(Adventure src/main.cpp  src/Player.cpp  src/Field.cpp src/Enemy.cpp )
 
 include(GNUInstallDirs)
 install(TARGETS Adventure
