@@ -13,6 +13,7 @@ public:
     int get_health();
     void damage();
     char shoot();
+    bool death();
 };
 
 #endif

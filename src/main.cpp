@@ -6,7 +6,7 @@
 void game();
 int main()
 {
-game();
+    game();
 #ifdef linux
     std::cout << "\t\t\tExit program!" << std::endl;
 #endif
@@ -26,7 +26,7 @@ void game()
     // fl.drawField(p);
 
     char move;
-    while (move != '0')
+    while (move != '0' && !p.death())
     {
 #ifdef WIN32
         system("cls");

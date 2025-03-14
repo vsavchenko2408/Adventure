@@ -17,5 +17,25 @@ int Player::get_health()
 
 void Player::damage()
 {
-    m_health -= 10;
+    if (m_health > 0)
+    {
+        m_health -= 10;
+    }
+    else
+    {
+        death();
+    }
+}
+
+bool Player::death()
+{
+    if (m_health > 0)
+    {
+        return false;
+    }
+    else
+    {
+        std::cout << "Game over!" << std::endl;
+        return true;
+    }
 }
