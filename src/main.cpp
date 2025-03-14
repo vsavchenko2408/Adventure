@@ -3,7 +3,20 @@
 #include "Player.h"
 #include "Field.h"
 #include "Enemy.h"
+void game();
 int main()
+{
+game();
+#ifdef linux
+    std::cout << "\t\t\tExit program!" << std::endl;
+#endif
+#ifdef WIN32
+    system("pause");
+#endif
+    return 0;
+}
+
+void game()
 {
     Player p;
     Enemy e1;
@@ -35,12 +48,4 @@ int main()
         fl.move(move, p);
         // fl.drawField(p, e);
     }
-
-#ifdef linux
-    std::cout << "\t\t\tExit program!" << std::endl;
-#endif
-#ifdef WIN32
-    system("pause");
-#endif
-    return 0;
 }
