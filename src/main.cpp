@@ -1,8 +1,8 @@
 #include <iostream>
 // #include <cstdlib>
-#include "Player.h"
-#include "Field.h"
-#include "Enemy.h"
+#include "../include/Player.h"
+#include "../include/Field.h"
+#include "../include/Enemy.h"
 void game();
 int main()
 {

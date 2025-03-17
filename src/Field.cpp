@@ -1,6 +1,6 @@
-#include "Field.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "../include/Field.h"
+#include "../include/Player.h"
+#include "../include/Enemy.h"
 #include <iostream>
 
 Field::Field()
